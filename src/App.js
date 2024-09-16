@@ -2,15 +2,15 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [nutri, setNutri] = useState([]); /* Usa o estado de componente em uma tag */
+  const [nutri, setNutri] = useState([]); 
 
-  useEffect(() => { /* Está função vai buscar as informações da API no código*/
+  useEffect(() => { 
     let url = 'https://sujeitoprogramador.com/rn-api/?api=posts'
 
-    fetch(url) /* Envia uma requisição para o servidor */
+    fetch(url) 
       .then((r) => r.json())
-      .then((json) => setNutri(json)) /* Aqui salva o arquivo na váriavel const */
-  }, []) /* Aqui acaba a importação da API */
+      .then((json) => setNutri(json))
+  }, []) 
 
   return (
     <div>
@@ -31,7 +31,7 @@ function App() {
             </article> {/* Está função troca as informações pelo oque tem na API*/}
           </div>
         );
-      })} {/* É como se fosse um FOR, mas para um arquivo json */}
+      })}
     </div>
 
   );
